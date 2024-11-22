@@ -1,0 +1,63 @@
+﻿# Logs
+*.log
+*.tlog
+
+# Output do build
+bin/
+obj/
+out/
+**/bin/
+**/obj/
+
+# Debug e Release
+**/[Dd]ebug/
+**/[Rr]elease/
+
+# Dados temporários
+*.tmp
+*.temp
+
+# Arquivos de sistema
+*.user
+*.suo
+*.userosscache
+*.sln.docstates
+*.orig
+*.cache
+
+# Pastas e configurações locais
+.vs/
+.vscode/
+.idea/
+*.DS_Store
+*.swp
+
+# Dependências
+packages/
+node_modules/
+
+# Arquivos gerados
+*.dll
+*.exe
+*.pdb
+*.class
+
+# Arquivos de backup
+*.bak
+*.old
+*.zip
+*.tar.gz
+*.rar
+
+# Dados sensíveis
+appsettings.*.json
+secrets.json
+
+# Arquivos de pacotes NuGet
+*.nupkg
+*.snupkg
+
+# Outros
+project.lock.json
+project.fragment.lock.json
+artifacts/

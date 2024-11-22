@@ -1,0 +1,34 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GymManagement.Api", "GymManagement.Api\GymManagement.Api.csproj", "{1571CD99-BA0F-4AD1-8BE9-EB7C8F6ED8DF}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GymManagement.Application", "GymManagement.Application\GymManagement.Application.csproj", "{04461232-37CE-4725-9473-0A5FA8002938}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GymManagement.Infrastructure", "GymManagement.Infrastructure\GymManagement.Infrastructure.csproj", "{457169EF-72E9-4201-83BE-D664225C73F7}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GymManagement.Domain", "GymManagement.Domain\GymManagement.Domain.csproj", "{0161DC3F-31AB-4440-ADBB-DBEEE92542A2}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{1571CD99-BA0F-4AD1-8BE9-EB7C8F6ED8DF}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{1571CD99-BA0F-4AD1-8BE9-EB7C8F6ED8DF}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{1571CD99-BA0F-4AD1-8BE9-EB7C8F6ED8DF}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{1571CD99-BA0F-4AD1-8BE9-EB7C8F6ED8DF}.Release|Any CPU.Build.0 = Release|Any CPU
+		{04461232-37CE-4725-9473-0A5FA8002938}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{04461232-37CE-4725-9473-0A5FA8002938}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{04461232-37CE-4725-9473-0A5FA8002938}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{04461232-37CE-4725-9473-0A5FA8002938}.Release|Any CPU.Build.0 = Release|Any CPU
+		{457169EF-72E9-4201-83BE-D664225C73F7}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{457169EF-72E9-4201-83BE-D664225C73F7}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{457169EF-72E9-4201-83BE-D664225C73F7}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{457169EF-72E9-4201-83BE-D664225C73F7}.Release|Any CPU.Build.0 = Release|Any CPU
+		{0161DC3F-31AB-4440-ADBB-DBEEE92542A2}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{0161DC3F-31AB-4440-ADBB-DBEEE92542A2}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{0161DC3F-31AB-4440-ADBB-DBEEE92542A2}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{0161DC3F-31AB-4440-ADBB-DBEEE92542A2}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+EndGlobal
