@@ -1,0 +1,13 @@
+﻿@host = localhost:5000
+@name = CreateSubscription
+@adminId = d6f12345-e6b8-4cd5-9ec2-5f6110a4e76c
+
+POST {{host}}/Subscription
+Content-Type: application/json
+
+{
+  "SubscriptionTye": "Free",
+  "AdminId": "{{adminId}}"
+}
+
+
