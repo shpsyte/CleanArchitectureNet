@@ -19,9 +19,12 @@ public class SubscriptionController(
              request.SubscriptionTye.ToString(), 
              request.AdminId);
         
-        var subscriptionId = await mediator.Send(command);
-      
-        var response = new SubscriptionResponse(subscriptionId, request.SubscriptionTye);
-        return Ok(response);
+        var createSubscriptionResult = await mediator.Send(command);
+        
+        return createSubscriptionResult.MatchFirst(
+        guid => Ok(new SubscriptionResponse(guid, request.SubscriptionTye)),
+        error => Problem()
+        );
+
     }
 }
