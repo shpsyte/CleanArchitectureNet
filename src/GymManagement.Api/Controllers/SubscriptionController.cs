@@ -22,7 +22,7 @@ public class SubscriptionController(
         var createSubscriptionResult = await mediator.Send(command);
         
         return createSubscriptionResult.MatchFirst(
-        guid => Ok(new SubscriptionResponse(guid, request.SubscriptionTye)),
+        subs => Ok(new SubscriptionResponse(subs.Id, request.SubscriptionTye)),
         error => Problem()
         );
 
