@@ -1,4 +1,5 @@
-﻿using GymManagement.Application.Common.Interfaces;
+﻿using System.Reflection;
+using GymManagement.Application.Common.Interfaces;
 using Microsoft.EntityFrameworkCore;
 
 namespace GymManagement.Infrastructure.Common.Persistence;
@@ -9,5 +10,11 @@ internal class GymManagementDbContext(DbContextOptions<GymManagementDbContext> o
     public async Task CommitAsync(CancellationToken cancellationToken)
     {
         await base.SaveChangesAsync(cancellationToken);
+    }
+
+    protected override void OnModelCreating(ModelBuilder modelBuilder)
+    {
+        modelBuilder.ApplyConfigurationsFromAssembly(Assembly.GetExecutingAssembly());
+        base.OnModelCreating(modelBuilder);
     }
 }

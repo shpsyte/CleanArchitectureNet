@@ -1,7 +1,7 @@
 ﻿@host = localhost:5000
 @adminId = d6f12345-e6b8-4cd5-9ec2-5f6110a4e76c
 
-GET {{host}}/Subscription/14f09030-1404-401c-8c2f-f3662f441704
+GET {{host}}/Subscription/ff2af9a4-360f-4dc3-b6da-00e9f59464dc
 Content-Type: application/json
 
 
