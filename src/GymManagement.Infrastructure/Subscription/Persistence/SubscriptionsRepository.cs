@@ -3,7 +3,7 @@ using GymManagement.Infrastructure.Common.Persistence;
 
 namespace GymManagement.Infrastructure.Subscription.Persistence;
 
-public class SubscriptionsRepository(GymManagementDbContext dbContext) : ISubscriptionRepository
+internal class SubscriptionsRepository(GymManagementDbContext dbContext) : ISubscriptionRepository
 {
     public async Task Add(Domain.Subscriptions.Subscription subscription)
     {

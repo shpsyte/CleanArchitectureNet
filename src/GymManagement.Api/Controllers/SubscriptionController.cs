@@ -16,8 +16,15 @@ public class SubscriptionController(
     [HttpPost]
     public async Task<IActionResult> CreateSubscription(CreateSubscriptionRequest request)
     {
+        
+        if (!Domain.Subscriptions.SubscriptionType.TryFromName(request.SubscriptionTye.ToString(), out var subscriptionType))
+        {
+            return Problem(statusCode: StatusCodes.Status400BadRequest, title: "Invalid subscription type"); 
+        }
+        
+        
         var command = new CreateSubscriptionCommand(
-             request.SubscriptionTye.ToString(), 
+            subscriptionType,
              request.AdminId);
         
         var createSubscriptionResult = await mediator.Send(command);
@@ -26,7 +33,7 @@ public class SubscriptionController(
         subs => CreatedAtAction(
                     nameof(GetSubscription), 
                    new { subscriptionId = subs.Id }, 
-                    new SubscriptionResponse(subs.Id, Enum.Parse<SubscriptionTye>(subs.SubscriptionType))
+                    new SubscriptionResponse(subs.Id, Enum.Parse<SubscriptionTye>(subs.SubscriptionType.Name))
                 ),
         error => Problem()
         );
@@ -40,7 +47,8 @@ public class SubscriptionController(
         var subscription = await mediator.Send(query);
         
         return subscription.MatchFirst(
-            subs => Ok(new SubscriptionResponse(subs.Id, Enum.Parse<SubscriptionTye>(subs.SubscriptionType))),
+            subs => Ok(new SubscriptionResponse(
+                subs.Id, Enum.Parse<SubscriptionTye>(subs.SubscriptionType.Name))),
             error => Problem()
         );
     }
