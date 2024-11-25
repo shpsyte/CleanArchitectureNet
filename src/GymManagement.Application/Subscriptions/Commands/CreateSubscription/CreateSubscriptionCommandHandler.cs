@@ -17,6 +17,13 @@ public class CreateSubscriptionCommandHandler(
         // create subscription
         var subscription = new Subscription(request.SubscriptionType, request.AdminId);
         
+        // activate subscription
+        var activationResult = subscription.Validate();
+        if (activationResult.IsError)
+        {
+            return activationResult.Errors;
+        }
+        
         // add it to the database
         await subscriptionRepository.Add(subscription);
         await unitOfWork.CommitAsync(cancellationToken);
